@@ -7,6 +7,7 @@ function DeleteTasks() {
   const handleDeleteTask = (index) => {
     const updatedTasks = tasks.filter((_, taskIndex) => taskIndex !== index);
     localStorage.setItem('tasks', JSON.stringify(updatedTasks));
+    windows.location.reload();
   };
 
   return (
